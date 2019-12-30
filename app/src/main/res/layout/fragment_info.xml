@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_chat_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_18"
+                android:text="@string/ta_chat_room"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <com.kunpeng.common.view.widget.roundtextview.RoundRelativeLayout
+                android:id="@+id/round_chat"
+                android:layout_width="@dimen/space_180"
+                android:layout_height="@dimen/space_84"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_12"
+                app:rv_cornerRadius="@dimen/space_10">
+
+                <com.shehuan.niv.NiceImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/bg_mine_card" />
+
+                <TextView
+                    android:id="@+id/tv_chat_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_10"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:drawableStart="@drawable/icon_chat_system"
+                    android:drawablePadding="@dimen/space_10"
+                    android:text="@string/ta_chat_room"
+                    android:textColor="@color/color_222222"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/space_15"
+                    android:layout_marginBottom="@dimen/space_6"
+                    android:text="@string/enter_chat"
+                    android:textColor="@color/color_EDEDED"
+                    android:textSize="@dimen/text_size_12" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_1"
+                    android:layout_above="@id/tv_enter"
+                    android:layout_marginStart="@dimen/space_15"
+                    android:layout_marginEnd="@dimen/space_15"
+                    android:layout_marginBottom="@dimen/space_6"
+                    android:background="@color/color_EDEDED" />
+
+            </com.kunpeng.common.view.widget.roundtextview.RoundRelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_18"
+                android:text="@string/photo_album"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_8"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/tv_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_18"
+                android:text="@string/contact_details"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_60"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginEnd="@dimen/space_15"
+                android:background="@color/white"
+                android:gravity="center"
+                app:rv_cornerRadius="@dimen/space_10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/icon_phone_num"
+                        android:drawablePadding="@dimen/space_10"
+                        android:gravity="center"
+                        android:text="@string/look_over"
+                        android:textColor="@color/color_C1C7CF"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_weChat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/icon_wechat_num"
+                        android:drawablePadding="@dimen/space_10"
+                        android:gravity="center"
+                        android:text="@string/look_over"
+                        android:textColor="@color/color_C1C7CF"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_qq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/icon_qq_num"
+                        android:drawablePadding="@dimen/space_10"
+                        android:gravity="center"
+                        android:text="@string/look_over"
+                        android:textColor="@color/color_C1C7CF"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+            </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+
+            <TextView
+                android:id="@+id/tv_match"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_18"
+                android:text="@string/matching_probability"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12">
+
+                <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_24"
+                    android:layout_marginStart="@dimen/space_15"
+                    app:rv_backgroundColor="@color/color_F2F2F2"
+                    app:rv_cornerRadius="@dimen/space_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:text="@string/connectivity"
+                        android:textColor="@color/color_C1C7CF"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_connect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:textColor="@color/color_222222"
+                        android:textSize="@dimen/text_size_12"
+                        tools:text="80%" />
+                </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+
+                <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_24"
+                    android:layout_marginStart="@dimen/space_12"
+                    app:rv_backgroundColor="@color/color_F2F2F2"
+                    app:rv_cornerRadius="@dimen/space_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:text="@string/number_calls"
+                        android:textColor="@color/color_C1C7CF"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_call_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:textColor="@color/color_222222"
+                        android:textSize="@dimen/text_size_12"
+                        tools:text="100" />
+                </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_12">
+
+                <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_24"
+                    app:rv_backgroundColor="@color/color_F2F2F2"
+                    app:rv_cornerRadius="@dimen/space_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:text="@string/average_call_duration"
+                        android:textColor="@color/color_C1C7CF"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_call_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:textColor="@color/color_222222"
+                        android:textSize="@dimen/text_size_12"
+                        tools:text="1分" />
+                </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+
+                <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_24"
+                    android:layout_marginStart="@dimen/space_12"
+                    app:rv_backgroundColor="@color/color_F2F2F2"
+                    app:rv_cornerRadius="@dimen/space_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:text="@string/user_evaluation"
+                        android:textColor="@color/color_C1C7CF"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/user_evaluation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:textColor="@color/color_222222"
+                        android:textSize="@dimen/text_size_12"
+                        tools:text="5星" />
+                </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_18"
+                android:text="@string/person_info"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_12">
+
+                <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_24"
+                    app:rv_backgroundColor="@color/color_F2F2F2"
+                    app:rv_cornerRadius="@dimen/space_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:text="@string/age"
+                        android:textColor="@color/color_C1C7CF"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:textColor="@color/color_222222"
+                        android:textSize="@dimen/text_size_12"
+                        tools:text="22" />
+                </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+
+                <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_24"
+                    android:layout_marginStart="@dimen/space_12"
+                    app:rv_backgroundColor="@color/color_F2F2F2"
+                    app:rv_cornerRadius="@dimen/space_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:text="@string/height"
+                        android:textColor="@color/color_C1C7CF"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:textColor="@color/color_222222"
+                        android:textSize="@dimen/text_size_12"
+                        tools:text="178cm" />
+                </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+
+                <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/space_24"
+                    android:layout_marginStart="@dimen/space_12"
+                    app:rv_backgroundColor="@color/color_F2F2F2"
+                    app:rv_cornerRadius="@dimen/space_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:text="@string/figure"
+                        android:textColor="@color/color_C1C7CF"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/tv_figure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/space_8"
+                        android:textColor="@color/color_222222"
+                        android:textSize="@dimen/text_size_12"
+                        tools:text="偏瘦" />
+                </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_18"
+                android:text="@string/person_label"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <com.kunpeng.common.view.widget.roundtextview.RoundTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_24"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_12"
+                android:gravity="center"
+                android:paddingStart="@dimen/space_8"
+                android:paddingEnd="@dimen/space_8"
+                android:text="温柔可爱"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_12"
+                app:rv_backgroundColor="@color/color_F2F2F2"
+                app:rv_cornerRadius="@dimen/space_10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_18"
+                android:text="@string/receive_gift"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewGift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginEnd="@dimen/space_10"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kunpeng.common.view.widget.roundtextview.RoundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_76"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="@dimen/space_60"
+        android:layout_height="@dimen/space_60"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp">
+        <com.kunpeng.userchat.view.RoundImageView
+          android:id="@+id/iv_head"
+            android:layout_width="@dimen/space_60"
+            android:layout_height="@dimen/space_60"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/boy_default_icon"
+            app:civ_border_color="@color/color_EF1263"
+            app:civ_border_width="@dimen/space_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:radius="@dimen/dp_10"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.kunpeng.common.view.widget.roundtextview.RoundTextView
+            android:id="@+id/roundTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_5"
+            android:paddingEnd="@dimen/space_5"
+            android:text="@string/online"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_8"
+            android:layout_alignParentBottom="true"
+            app:rv_backgroundColor="#40F81A"
+            app:rv_cornerRadius="@dimen/dp_10" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/name_meaasge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_10"
+        android:layout_marginTop="@dimen/space_18"
+        android:layout_toEndOf="@id/rl_head">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="#FF333333"
+            android:textSize="14sp"
+            tools:text="用户名" />
+
+        <ImageView
+            android:id="@+id/vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/space_3"
+            android:background="@drawable/anchor_vip"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/space_8"
+            android:background="@drawable/icon_message_vip"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/iv_authentication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/space_8"
+            android:background="@drawable/icon_message_search"
+            android:contentDescription="@string/app_name" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_meaasge"
+        android:layout_marginStart="@dimen/space_10"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_toEndOf="@id/rl_head"
+        android:textColor="@color/color_888888"
+        android:textSize="@dimen/text_size_13"
+        tools:text="名字" />
+
+    <TextView
+        android:id="@+id/tv_online_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_12" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/space_22"
+        android:layout_marginEnd="@dimen/space_24"
+        android:textColor="@color/color_C1C7CF"
+        android:textSize="@dimen/text_size_11"
+        tools:text="15:50" />
+
+    <com.kunpeng.common.view.widget.roundtextview.RoundTextView
+        android:id="@+id/tv_unread"
+        android:layout_width="@dimen/space_16"
+        android:layout_height="@dimen/space_16"
+        android:layout_below="@id/tv_time"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/space_6"
+        android:layout_marginEnd="@dimen/space_24"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_10"
+        app:rv_backgroundColor="@color/color_EF1263"
+        app:rv_cornerRadius="@dimen/space_10"
+        tools:text="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/space_15"
+        android:layout_toEndOf="@id/rl_head"
+        android:background="@color/color_EEEEEE" />
+
+</com.kunpeng.common.view.widget.roundtextview.RoundRelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/common"
+            layout="@layout/common_head_white_bg" />
+
+        <com.kunpeng.common.view.widget.roundtextview.RoundRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_230"
+            android:layout_marginStart="@dimen/space_15"
+            android:layout_marginTop="@dimen/space_15"
+            android:layout_marginEnd="@dimen/space_15"
+            app:rv_backgroundColor="@color/white"
+            app:rv_cornerRadius="@dimen/space_10">
+
+            <TextView
+                android:id="@+id/tv_opinion_suggestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_15"
+                android:text="@string/opinion_suggestion"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_15" />
+
+            <EditText
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_150"
+                android:layout_below="@id/tv_opinion_suggestion"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_marginEnd="@dimen/space_15"
+                android:background="@drawable/bg_f4f4f4"
+                android:gravity="start"
+                android:hint="@string/enter_suggestion"
+                android:paddingStart="@dimen/space_15"
+                android:paddingTop="@dimen/space_15"
+                android:textColor="@color/color_222222"
+                android:textColorHint="@color/color_C1C7CF"
+                android:textSize="@dimen/text_size_12" />
+
+        </com.kunpeng.common.view.widget.roundtextview.RoundRelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/space_38"
+            android:layout_marginTop="@dimen/space_30"
+            android:layout_marginEnd="@dimen/space_38"
+            android:background="@drawable/bg_item_login"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+
+</layout>

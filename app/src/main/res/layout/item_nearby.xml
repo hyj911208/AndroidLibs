@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:background="@drawable/nearby_item_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="@dimen/space_60"
+        android:layout_height="@dimen/space_60"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.kunpeng.userchat.view.RoundImageView
+            android:id="@+id/head_image"
+            android:layout_width="@dimen/space_60"
+            android:layout_height="@dimen/space_60"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/boy_default_icon"
+            app:civ_border_color="@color/color_EF1263"
+            app:civ_border_width="@dimen/space_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:radius="@dimen/dp_10"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.kunpeng.common.view.widget.roundtextview.RoundTextView
+            android:id="@+id/roundTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_5"
+            android:paddingEnd="@dimen/space_5"
+            android:text="@string/online"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_8"
+            android:layout_alignParentBottom="true"
+            app:rv_backgroundColor="#40F81A"
+            app:rv_cornerRadius="@dimen/dp_10" />
+    </RelativeLayout>
+    <!--头像-->
+
+    <!--中间数据-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linear_op"
+        app:layout_constraintStart_toEndOf="@id/rl_head"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="#FF333333"
+                android:textSize="14sp"
+                tools:text="用户名" />
+            <ImageView
+                android:id="@+id/iv_authentication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/space_8"
+                android:background="@drawable/icon_authentication"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/iv_high_quality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/space_8"
+                android:background="@drawable/high_quality"
+                android:contentDescription="@string/app_name" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/voice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"
+                android:text="LV.01"
+                android:textColor="#FFC113"
+                android:textSize="@dimen/font_size_10"
+              />
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:drawableStart="@drawable/icon_search_found"
+                android:paddingTop="2dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:textColor="#FB827E"
+                android:textSize="10sp"
+                tools:text="成都" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--尾部数据-->
+    <LinearLayout
+        android:id="@+id/linear_op"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/rl_head"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rl_head">
+
+        <TextView
+            android:id="@+id/online_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:gravity="center"
+            android:textColor="#41C97D"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="空闲" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/message_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/private_message" />
+
+            <ImageView
+                android:id="@+id/video_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_voice" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

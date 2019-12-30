@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_mandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/space_5"
+        android:src="@drawable/star" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/space_0_5"
+        android:layout_toEndOf="@id/iv_mandatory"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10">
+        <!--会员姓名-->
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_5"
+            android:layout_marginBottom="@dimen/space_5"
+            android:textSize="@dimen/font_size_14"
+            tools:text="主题" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_10"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="1"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/font_size_15"
+                tools:text="我是内容" />
+
+            <com.kunpeng.common.view.widget.roundtextview.ContainsEmojiEditText
+                android:id="@+id/et_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_10"
+                android:background="@color/transparent"
+                android:gravity="right"
+                android:textColor="#999999"
+                android:textColorHint="@color/hint_d9"
+                android:textSize="@dimen/font_size_14"
+                tools:text="我是谁" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_10"
+            android:textColor="@color/gray_9b"
+            android:textSize="@dimen/font_size_14"
+            tools:text="unit" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_5"
+            android:src="@drawable/ic_arrow_right" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/style_line_10"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/space_5"
+        android:layout_toEndOf="@id/iv_mandatory"/>
+
+</RelativeLayout>

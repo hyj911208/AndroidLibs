@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<com.kunpeng.userchat.view.StickyNestedScrollLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.kunpeng.userchat.view.ForegroundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#88000000"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="148dp" />
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:background="@color/white"
+                android:id="@+id/magic_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_48" />
+        </com.kunpeng.userchat.view.ForegroundLinearLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.kunpeng.userchat.view.StickyNestedScrollLayout>
+
+</layout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/space_48"
+        android:layout_height="@dimen/space_48">
+
+        <com.shehuan.niv.NiceImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bg_mine_card"
+            app:border_color="#FF0084"
+            app:border_width="1dp"
+            app:is_circle="true" />
+
+        <TextView
+            android:layout_width="@dimen/space_24"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_mine_text"
+            android:gravity="center"
+            android:text="在线"
+            android:textColor="#ffeddcdc"
+            android:textSize="8sp" />
+    </RelativeLayout>
+
+</layout>

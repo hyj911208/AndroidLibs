@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="@dimen/space_10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--背景图片-->
+        <com.kunpeng.common.view.widget.roundtextview.CustomRoundAngleImageView
+            android:id="@+id/auth_head"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            app:left_bottom_radius="@dimen/space_10"
+            app:left_top_radius="@dimen/space_10"
+            app:right_bottom_radius="@dimen/space_10"
+            app:right_top_radius="@dimen/space_10" />
+
+        <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            app:rv_backgroundColor="#78000000"
+            app:rv_cornerRadius="9dp"
+            tools:ignore="RelativeOverlap">
+
+            <ImageView
+                android:id="@+id/online"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/dot_red" />
+
+            <TextView
+                android:id="@+id/online_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_11"
+                tools:ignore="SmallSp"
+                tools:text="我有空" />
+        </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+
+        <!--地理位置-->
+        <!--        <TextView-->
+        <!--            android:id="@+id/address"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignBottom="@id/auth_head"-->
+        <!--            android:background="#78000000"-->
+        <!--            android:drawableStart="@drawable/ic_location"-->
+        <!--            android:drawablePadding="5dp"-->
+        <!--            android:gravity="center_vertical"-->
+        <!--            android:paddingStart="5dp"-->
+        <!--            android:shadowDx="1"-->
+        <!--            android:shadowDy="1"-->
+        <!--            android:shadowRadius="1"-->
+        <!--            android:textColor="#CCFFFFFF"-->
+        <!--            android:textSize="12sp"-->
+        <!--            tools:ignore="RtlSymmetry"-->
+        <!--            tools:text="成都,100KM" />-->
+
+        <!--收费价格-->
+        <TextView
+            android:id="@+id/auth_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_text_radius"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:ignore="RtlSymmetry,SmallSp"
+            tools:text="收费价格" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_50"
+            android:layout_below="@id/auth_head"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nick_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/color_222222"
+                        android:textSize="@dimen/text_size_15"
+                        android:textStyle="bold"
+                        tools:ignore="NestedWeights"
+                        tools:text="用户名称" />
+
+                    <ImageView
+                        android:id="@+id/iv_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:background="@drawable/anchor_vip"
+                        android:contentDescription="@string/app_name" />
+
+                    <ImageView
+                        android:id="@+id/iv_authentication"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:background="@drawable/icon_authentication"
+                        android:contentDescription="@string/app_name" />
+
+                    <ImageView
+                        android:id="@+id/iv_high_quality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/space_8"
+                        android:background="@drawable/high_quality"
+                        android:contentDescription="@string/app_name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_bg_text_location"
+                        android:drawableStart="@drawable/ic_near_location"
+                        android:drawablePadding="3dp"
+                        android:includeFontPadding="false"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12"
+                        tools:text="成都" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

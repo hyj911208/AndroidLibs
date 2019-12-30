@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.kunpeng.userchat.view.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        app:rv_backgroundColor="#fff"
+        app:rv_cornerRadius="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+            android:text="你要与我视频吗？"
+            android:textColor="#545454"
+            android:textSize="14sp" />
+        <com.kunpeng.userchat.view.RecyclerGridView
+            android:id="@+id/gride"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:horizontalSpacing="@dimen/space_3"
+            android:verticalSpacing="@dimen/space_3">
+
+        </com.kunpeng.userchat.view.RecyclerGridView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_10"
+            android:layout_marginBottom="@dimen/space_15">
+
+            <TextView
+                android:id="@+id/tv_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="12"
+                android:textColor="@color/color_C1C7CF"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/space_18"
+                android:layout_toEndOf="@id/tv_like"
+                android:text="12"
+                android:textColor="@color/color_C1C7CF"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:textColor="#C1C7CF"
+                android:textSize="@dimen/text_size_12"
+                android:layout_marginRight="10dp"
+                tools:text="1111111111" />
+        </RelativeLayout>
+    </com.kunpeng.userchat.view.RoundLinearLayout>
+</LinearLayout>

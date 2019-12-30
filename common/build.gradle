@@ -1,0 +1,103 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.versions.compileSdkVersion
+    buildToolsVersion rootProject.ext.versions.buildToolsVersion
+    dataBinding.enabled = true
+    defaultConfig {
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode rootProject.ext.versions.versionCode
+        versionName rootProject.ext.versions.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api rootProject.ext.dependencies["appcompat-v7"]
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["recyclerview"]
+    //版本 23以上（必须）
+    api rootProject.ext.dependencies["support-v4"]
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    // 沉浸式状态栏
+    api 'com.gyf.immersionbar:immersionbar:3.0.0'
+    // fragment快速实现（可选）
+    api 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+    // eventbus
+    api 'org.greenrobot:eventbus:3.1.1'
+    // json
+    implementation 'com.google.code.gson:gson:2.8.5'
+    // 屏幕适配
+    implementation 'me.jessyan:autosize:1.1.2'
+    // 方法数超65535
+    api 'androidx.multidex:multidex-instrumentation:2.0.0'
+    // 网络请求
+    api "com.trello.rxlifecycle2:rxlifecycle:2.2.2"
+    api "com.trello.rxlifecycle2:rxlifecycle-android:2.2.2"
+    api "com.trello.rxlifecycle2:rxlifecycle-components:2.2.2"
+    //    api "io.reactivex.rxjava3:rxjava:3.0.0-RC6"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.8"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    implementation "com.jakewharton.rxbinding2:rxbinding:2.1.1"
+    implementation "com.squareup.retrofit2:retrofit:2.5.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.5.0"
+    implementation 'com.squareup.okhttp3:okhttp:3.14.2'
+//    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okio:okio:2.2.2'
+    // 权限控制
+    api 'com.yanzhenjie:permission:2.0.0'
+    //  图片选择
+    implementation 'com.zhihu.android:matisse:0.5.1'
+    //    implementation 'com.squareup.picasso:picasso:2.71828'
+    //下拉刷新
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-andx-4'
+
+    // 图片加载相关
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.9.0"
+    implementation 'com.github.bumptech.glide:annotations:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    //    gilide不支持Androidx  所以需要下面这两行
+    implementation "com.android.support:support-annotations:28.0.0"
+    annotationProcessor "com.android.support:support-annotations:28.0.0"
+    //显示大图
+    implementation 'com.github.chrisbanes:PhotoView:2.1.4'
+    //一个画tab的控件
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    api 'com.github.hackware1993:MagicIndicator:1.6.0'
+    //滑动选择
+    api 'com.contrarywind:Android-PickerView:4.1.9'
+    //圆形图片
+    api 'com.github.SheHuan:NiceImageView:1.0.5'
+    //Adapter
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+    implementation 'com.alibaba:arouter-api:1.4.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    api 'com.github.lihangleo2:ShadowLayout:2.1.5'
+}

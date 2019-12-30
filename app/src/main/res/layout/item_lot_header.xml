@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_15"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/space_15"
+        app:rv_cornerRadius="@dimen/space_10"
+        app:rv_strokeColor="@color/color_FDD226"
+        app:rv_strokeWidth="@dimen/space_2">
+
+        <RelativeLayout
+            android:id="@+id/gift_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_lot_card_head"
+            android:paddingStart="@dimen/space_15"
+            android:paddingEnd="@dimen/space_15"
+            android:paddingBottom="@dimen/space_15">
+
+            <RelativeLayout
+                android:id="@+id/rl_head"
+                android:layout_width="@dimen/space_44"
+                android:layout_height="wrap_content">
+
+                <com.kunpeng.common.view.widget.imageview.CircleImageView
+                    android:id="@+id/iv_left"
+                    android:layout_width="@dimen/space_44"
+                    android:layout_height="@dimen/space_44"
+                    android:layout_marginTop="@dimen/space_18"
+                    android:src="@drawable/bg_mine_card"
+                    app:border_color="#FF0084"
+                    app:border_width="2dp"
+                    app:is_circle="true" />
+
+                <com.kunpeng.common.view.widget.imageview.CircleImageView
+                    android:id="@+id/iv_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/icon_vip" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/rl_head"
+                android:layout_alignBottom="@id/rl_head"
+                android:layout_marginStart="@dimen/space_28"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_toEndOf="@id/rl_head"
+                android:gravity="center_vertical"
+                android:text="送"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/gift_image"
+                android:layout_width="@dimen/space_60"
+                android:layout_height="@dimen/space_48"
+                android:layout_alignTop="@id/rl_head"
+                android:layout_alignBottom="@id/rl_head"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/rl_head"
+                android:layout_alignBottom="@id/rl_head"
+                android:layout_marginTop="@dimen/space_10"
+                android:layout_marginEnd="@dimen/space_28"
+                android:layout_toStartOf="@id/rl_right_head"
+                android:gravity="center_vertical"
+                android:text="给"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rl_right_head"
+                android:layout_width="@dimen/space_48"
+                android:layout_height="@dimen/space_48"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/space_15">
+
+                <com.kunpeng.common.view.widget.imageview.CircleImageView
+                    android:id="@+id/end_head"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/bg_mine_card"
+                    app:border_color="#FF0084"
+                    app:border_width="1dp"
+                    app:is_circle="true" />
+
+                <TextView
+                    android:id="@+id/tv_online"
+                    android:layout_width="@dimen/space_24"
+                    android:layout_height="12dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bg_mine_text"
+                    android:gravity="center"
+                    android:text="在线"
+                    android:textColor="#ffeddcdc"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/left_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_head"
+                android:layout_alignStart="@id/rl_head"
+                android:layout_alignEnd="@id/rl_head"
+                android:layout_marginTop="@dimen/space_20"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="赵九九"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/right_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_right_head"
+                android:layout_alignStart="@id/rl_right_head"
+                android:layout_alignEnd="@id/rl_right_head"
+                android:layout_marginTop="@dimen/space_20"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="赵九九"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/gift_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/left_nick_name"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:text="999钻石"
+                android:textColor="@color/color_FDD226"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gift_coin"
+                android:layout_marginTop="@dimen/space_24"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:text="并对她说：酒漫三山布衣醉，星动云帆鱼儿飞、"
+                android:textColor="@color/color_222222"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description_text"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="@dimen/space_18">
+
+                <com.kunpeng.common.view.widget.imageview.CircleImageView
+                    android:id="@+id/head_image1"
+                    android:layout_width="@dimen/space_28"
+                    android:layout_height="@dimen/space_28"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/bg_mine_card"
+                    app:is_circle="true" />
+
+                <com.kunpeng.common.view.widget.imageview.CircleImageView
+                    android:id="@+id/head_image2"
+                    android:layout_width="@dimen/space_28"
+                    android:layout_height="@dimen/space_28"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_toEndOf="@id/head_image1"
+                    android:src="@drawable/bg_mine_card"
+                    app:is_circle="true" />
+
+                <com.kunpeng.common.view.widget.imageview.CircleImageView
+                    android:id="@+id/head_image3"
+                    android:layout_width="@dimen/space_28"
+                    android:layout_height="@dimen/space_28"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_toEndOf="@id/head_image2"
+                    android:src="@drawable/bg_mine_card"
+                    app:is_circle="true" />
+
+                <com.kunpeng.common.view.widget.imageview.CircleImageView
+                    android:id="@+id/head_image4"
+                    android:layout_width="@dimen/space_28"
+                    android:layout_height="@dimen/space_28"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_toEndOf="@id/head_image3"
+                    android:src="@drawable/bg_mine_card"
+                    app:is_circle="true" />
+
+                <com.kunpeng.common.view.widget.imageview.CircleImageView
+                    android:id="@+id/head_image5"
+                    android:layout_width="@dimen/space_28"
+                    android:layout_height="@dimen/space_28"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_toEndOf="@id/head_image4"
+                    android:src="@drawable/bg_mine_card"
+                    app:is_circle="true" />
+
+                <TextView
+                    android:id="@+id/praise_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/space_5"
+                    android:layout_toEndOf="@id/head_image5"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:text="99人送上祝福"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/praise_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/space_5"
+                    android:src="@drawable/icon_lot_lick" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+
+</LinearLayout>

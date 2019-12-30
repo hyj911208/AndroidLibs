@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_100"
+    android:gravity="center_vertical"
+    app:rv_backgroundColor="@color/color_EF1263"
+    app:rv_cornerRadius="@dimen/space_15">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/integral_value"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_how_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"
+            tools:text="1.5W钻石" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_right_head"
+            android:layout_width="@dimen/space_48"
+            android:layout_height="@dimen/space_48">
+
+            <com.shehuan.niv.NiceImageView
+                android:id="@+id/end_head"
+                android:layout_width="@dimen/space_42"
+                android:layout_height="@dimen/space_42"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bg_mine_card"
+                app:border_color="@color/white"
+                app:border_width="1dp"
+                app:is_circle="true" />
+
+            <TextView
+                android:id="@+id/tv_online"
+                android:layout_width="@dimen/space_24"
+                android:layout_height="12dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_mine_text"
+                android:gravity="center"
+                android:text="在线"
+                android:textColor="#ffeddcdc"
+                android:textSize="8sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15"
+            tools:text="名字啊" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/monthly"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_monthly_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"
+            tools:text="1.5W钻石" />
+    </LinearLayout>
+
+</com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        tools:ignore="HardcodedText">
+
+        <include layout="@layout/common_head_white_bg" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_10"
+            android:background="@color/color_EEEEEE" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:layout_marginStart="@dimen/space_20"
+            android:layout_marginTop="@dimen/space_10">
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableStart="@drawable/icon_phone_number"
+                android:drawablePadding="@dimen/space_5"
+                android:text="手机号"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_15" />
+
+            <EditText
+                android:id="@+id/et_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tv_number"
+                android:background="@color/transparency"
+                android:hint="请输入手机号码"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:paddingStart="@dimen/space_30"
+                android:paddingEnd="@dimen/space_20"
+                android:textColor="@color/color_222222"
+                android:textColorHint="@color/color_C1C7CF"
+                android:textSize="@dimen/text_size_15" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_0_5"
+            android:layout_marginStart="@dimen/space_15"
+            android:layout_marginEnd="@dimen/space_15"
+            android:background="@color/color_F11F6C" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:layout_marginStart="@dimen/space_20"
+            android:layout_marginEnd="@dimen/space_20">
+
+            <TextView
+                android:id="@+id/tv_verify_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableStart="@drawable/icon_verify_code"
+                android:drawablePadding="@dimen/space_5"
+                android:text="验证码"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_15" />
+
+            <EditText
+                android:id="@+id/et_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tv_verify_code"
+                android:background="@color/transparency"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLines="1"
+                android:paddingStart="@dimen/space_30"
+                android:paddingEnd="@dimen/space_30"
+                android:textColor="@color/color_222222"
+                android:textColorHint="@color/color_C1C7CF"
+                android:textSize="@dimen/text_size_15" />
+
+            <com.kunpeng.common.view.widget.roundtextview.CustomTimeDeadTextView
+                android:id="@+id/tv_get_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/space_10"
+                android:text="@string/get_verification_code"
+                android:textColor="@color/color_6139F0" />
+
+            <View
+                android:layout_width="@dimen/space_1"
+                android:layout_height="@dimen/space_18"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/space_20"
+                android:layout_toStartOf="@id/tv_get_verify"
+                android:background="@color/color_6139F0" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_0_5"
+            android:layout_marginStart="@dimen/space_15"
+            android:layout_marginEnd="@dimen/space_15"
+            android:background="@color/color_EEEEEE" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:layout_marginStart="@dimen/space_20"
+            android:layout_marginEnd="@dimen/space_20">
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableStart="@drawable/icon_phone_password"
+                android:drawablePadding="@dimen/space_5"
+                android:text="密码"
+                android:textColor="@color/color_222222"
+                android:textSize="@dimen/text_size_15" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/tv_password"
+                android:background="@color/transparency"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="请设置登录密码（6-20位）"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/space_40"
+                android:paddingEnd="@dimen/space_40"
+                android:textColor="@color/color_222222"
+                android:textColorHint="@color/color_C1C7CF"
+                android:textSize="@dimen/text_size_15" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_0_5"
+            android:layout_marginStart="@dimen/space_15"
+            android:layout_marginEnd="@dimen/space_15"
+            android:background="@color/color_EEEEEE" />
+
+        <com.kunpeng.userchat.view.CustomInfoEditTextView
+            android:id="@+id/ll_sex"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            app:cie_edit_hint="性别选择后不能修改"
+            app:cie_editable="false"
+            app:cie_mandatory_visibility="gone"
+            app:cie_mode="SEX"
+            app:cie_prompt_text="性别"
+            app:cie_show_arrow="true" />
+
+        <com.kunpeng.userchat.view.CustomInfoEditTextView
+            android:id="@+id/ll_birth"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            app:cie_edit_hint="请选择生日"
+            app:cie_editable="false"
+            app:cie_mandatory_visibility="gone"
+            app:cie_mode="OLD"
+            app:cie_prompt_text="年龄"
+            app:cie_show_arrow="true" />
+
+        <com.kunpeng.userchat.view.CustomInfoEditTextView
+            android:id="@+id/ll_city"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            app:cie_edit_hint="请选择所在城市"
+            app:cie_editable="false"
+            app:cie_mandatory_visibility="gone"
+            app:cie_mode="CITY"
+            app:cie_prompt_text="地址"
+            app:cie_show_arrow="true" />
+
+        <TextView
+            android:id="@+id/tv_sign"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/space_38"
+            android:layout_marginTop="@dimen/space_40"
+            android:layout_marginEnd="@dimen/space_38"
+            android:background="@drawable/login_text_submit"
+            android:gravity="center"
+            android:text="@string/sign_up_now"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</layout>

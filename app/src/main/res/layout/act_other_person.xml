@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_210"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentScrim="?attr/colorPrimary"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:image_scale_type="fit_xy"
+                        app:indicator_height="@dimen/space_6"
+                        app:indicator_width="@dimen/space_6" />
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_below="@+id/view"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/space_15"
+                android:layout_marginTop="-90dp"
+                android:layout_marginEnd="@dimen/space_15"
+                android:background="@drawable/shape_bg_white"
+                android:fillViewport="true"
+                app:layout_anchor="@id/appbarLayout"
+                app:layout_anchorGravity="bottom"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_right_head"
+                            android:layout_width="@dimen/space_48"
+                            android:layout_height="@dimen/space_48"
+                            android:layout_marginStart="@dimen/space_16"
+                            android:layout_marginTop="@dimen/space_16">
+
+                            <com.shehuan.niv.NiceImageView
+                                android:id="@+id/end_head"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/bg_mine_card"
+                                app:border_color="#FF0084"
+                                app:border_width="1dp"
+                                app:is_circle="true" />
+
+                            <TextView
+                                android:id="@+id/tv_online_status"
+                                android:layout_width="@dimen/space_24"
+                                android:layout_height="12dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/bg_mine_text"
+                                android:gravity="center"
+                                android:text="@string/online"
+                                android:textColor="@color/color_EDDCDC"
+                                android:textSize="@dimen/text_size_8" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/space_10"
+                            android:layout_marginTop="@dimen/space_20"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/nick_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:includeFontPadding="false"
+                                    android:singleLine="true"
+                                    android:textColor="#FF333333"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    tools:text="用户名" />
+
+                                <ImageView
+                                    android:id="@+id/vip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/space_3"
+                                    android:background="@drawable/anchor_vip"
+                                    android:contentDescription="@string/app_name"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/iv_grade"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/space_8"
+                                    android:background="@drawable/anchor_vip"
+                                    android:contentDescription="@string/app_name" />
+
+                                <ImageView
+                                    android:id="@+id/iv_authentication"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/space_8"
+                                    android:background="@drawable/icon_authentication"
+                                    android:contentDescription="@string/app_name" />
+
+                                <ImageView
+                                    android:id="@+id/iv_high_quality"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/space_8"
+                                    android:background="@drawable/high_quality"
+                                    android:contentDescription="@string/app_name" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_8"
+                                android:text="ID:222222"
+                                android:textColor="@color/color_222222"
+                                android:textSize="@dimen/text_size_12" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_8">
+
+                                <TextView
+                                    android:id="@+id/tv_diamond"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableStart="@drawable/icon_mine_shi"
+                                    android:drawablePadding="@dimen/space_4"
+                                    android:text="1212"
+                                    android:textColor="@color/color_C1C7CF"
+                                    android:textSize="@dimen/text_size_12" />
+
+                                <TextView
+                                    android:id="@+id/tv_rank"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableStart="@drawable/icon_mine_shi"
+                                    android:drawablePadding="@dimen/space_4"
+                                    android:text="1212"
+                                    android:textColor="@color/color_C1C7CF"
+                                    android:textSize="@dimen/text_size_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <net.lucode.hackware.magicindicator.MagicIndicator
+                        android:id="@+id/magic_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_48" />
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_45"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <com.lihang.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_9"
+                app:hl_cornerRadius="14dp"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_shadowBackColor="@color/white"
+                app:hl_shadowBackColorClicked="#545450"
+                app:hl_shadowColor="#545454"
+                app:hl_shadowLimit="5dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_chat"
+                    android:layout_width="@dimen/space_50"
+                    android:layout_height="@dimen/space_29"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_other_chat" />
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:hl_cornerRadius="14dp"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_shadowBackColor="@color/white"
+                app:hl_shadowBackColorClicked="#545450"
+                app:hl_shadowColor="#545454"
+                app:hl_shadowLimit="5dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_gift"
+                    android:layout_width="@dimen/space_50"
+                    android:layout_height="@dimen/space_29"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_other_gift" />
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:hl_cornerRadius="14dp"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_shadowBackColor="@color/white"
+                app:hl_shadowBackColorClicked="#545450"
+                app:hl_shadowColor="#545454"
+                app:hl_shadowLimit="5dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_gz"
+                    android:layout_width="@dimen/space_50"
+                    android:layout_height="@dimen/space_29"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_other_add" />
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_10"
+                app:hl_cornerRadius="14dp"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_shadowBackColor="@color/white"
+                app:hl_shadowBackColorClicked="#EF1263"
+                app:hl_shadowColor="#EF1263"
+                app:hl_shadowLimit="5dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_voice"
+                    android:layout_width="@dimen/space_71"
+                    android:layout_height="@dimen/space_29"
+                    android:background="@drawable/bg_other_voice"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_other_voice" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/voice"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15" />
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+            <com.lihang.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_10"
+                app:hl_cornerRadius="14dp"
+                app:hl_dx="0dp"
+                app:hl_dy="0dp"
+                app:hl_shadowBackColor="@color/white"
+                app:hl_shadowBackColorClicked="#FFA0A2"
+                app:hl_shadowColor="#FFA0A2"
+                app:hl_shadowLimit="5dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_video"
+                    android:layout_width="@dimen/space_71"
+                    android:layout_height="@dimen/space_29"
+                    android:background="@drawable/bg_other_video"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_other_video" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/video"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_15" />
+                </LinearLayout>
+
+            </com.lihang.ShadowLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

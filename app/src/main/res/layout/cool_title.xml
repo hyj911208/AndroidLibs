@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_44"
+        android:orientation="vertical"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_width="@dimen/space_44"
+            android:layout_height="@dimen/space_44"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/space_3"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/space_13"
+            android:src="@drawable/ic_search" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/sex_switch"
+            android:layout_width="@dimen/space_44"
+            android:layout_height="@dimen/space_44"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/search_button"
+            android:contentDescription="@string/app_name"
+            android:paddingStart="@dimen/space_2"
+            android:paddingTop="@dimen/space_13"
+            android:paddingEnd="@dimen/space_15"
+            android:paddingBottom="@dimen/space_13"
+            android:src="@drawable/ic_sex_select" />
+
+        <com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout
+            android:id="@+id/rll_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/space_15"
+            android:orientation="horizontal"
+            app:rv_backgroundColor="@color/transparent"
+            app:rv_cornerRadius="@dimen/space_4"
+            app:rv_strokeColor="@color/color_C1C7CF"
+            app:rv_strokeWidth="@dimen/space_0_5">
+
+            <TextView
+                android:id="@+id/message_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_5"
+                android:layout_marginTop="@dimen/space_3"
+                android:layout_marginEnd="@dimen/space_5"
+                android:layout_marginBottom="@dimen/space_3"
+                android:text="@string/preferably_online"
+                android:textColor="@color/color_C1C7CF"
+                android:textSize="@dimen/text_size_11" />
+        </com.kunpeng.common.view.widget.roundtextview.RoundLinearLayout>
+
+    </RelativeLayout>
+
+</layout>

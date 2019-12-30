@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_68"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_chat_suggestion"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_38"
+            android:background="@drawable/bg_chat_system"
+            android:drawableStart="@drawable/icon_chat_complaint"
+            android:gravity="center"
+            android:paddingStart="@dimen/space_10"
+            android:paddingEnd="@dimen/space_10"
+            android:text="@string/complaint_suggestions"
+            android:textColor="@color/color_C1C7CF"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/tv_chat_system"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_38"
+            android:layout_marginStart="@dimen/space_24"
+            android:background="@drawable/bg_chat_system"
+            android:drawableStart="@drawable/icon_chat_system"
+            android:gravity="center"
+            android:paddingStart="@dimen/space_20"
+            android:paddingEnd="@dimen/space_20"
+            android:text="@string/system_information"
+            android:textColor="@color/color_C1C7CF"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+</LinearLayout>
